@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import IncreaseButton from './IncreaseButton'
-import DecreaseButton from './DecreaseButton'
+import Increment from './Increment'
+import Decrement from './Decrement'
 import './App.css'
 
 function App() {
@@ -27,14 +27,12 @@ function App() {
     setCount((prevCount) => {
       let newCount = prevCount - 1;
 
-      if (newCount > 0 || newCount <= 20) {
+      if (newCount === 0) {
+        setThresholdMsg("You've reached the limit");
+        newCount = prevCount;
+      } else if (newCount > 0 || newCount <= 20) {
         setThresholdMsg("");
       }
-
-      if (newCount === 0) {
-        newCount = prevCount + 0;
-        setThresholdMsg("You've reached the limit");
-      } 
       return newCount;
   })
 }
@@ -44,8 +42,8 @@ function App() {
       <h1>{AppName}</h1>
       <h2>{count}</h2>
       <div className="card">
-        <IncreaseButton count={count} increaseCount={increaseCount} />
-        <DecreaseButton count={count} decreaseCount={decreaseCount} />
+        <Increment count={count} increaseCount={increaseCount} />
+        <Decrement count={count} decreaseCount={decreaseCount} />
       </div>
       <p>{thresholdMsg}</p>
     </>
