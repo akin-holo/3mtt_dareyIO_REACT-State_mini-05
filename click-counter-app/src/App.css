@@ -1,0 +1,48 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  width: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: blue;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+button {
+  color: white;
+  width: 150px;
+  padding: 10px 0;
+  margin: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-weight: 600;
+  ;
+}
+.greenBtn {
+  background-color: green;
+}
+.greenBtn:active {
+  color:  rgb(5, 83, 5);
+  background-color: white;
+  border: 1px solid green;
+}
+.redBtn {
+  background-color: red;
+}
+.redBtn:active {
+  color: red;
+  background-color: white;
+  border: 1px solid red;
+
+}
+
+
+
